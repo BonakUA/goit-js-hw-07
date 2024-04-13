@@ -1,0 +1,22 @@
+const titles = document.querySelectorAll('h2');
+titles.forEach((title) => title.classList.add('title'));
+const items = document.querySelectorAll('li')
+
+function addSelector(items) {
+    items.forEach((item) => {
+        if (!item.classList.contains('item')) {
+            item.classList.add('items');
+        }
+    });
+}
+addSelector(items);
+
+const categoriesItems = document.querySelectorAll('.item');
+console.log(`Number of categories: ${categoriesItems.length}`);
+
+categoriesItems.forEach(item => {
+    const categoryName = item.querySelector('h2').textContent;
+    const categoryElements = item.querySelectorAll('li');
+    console.log(`Category: ${categoryName}`);
+    console.log(`Elements: ${categoryElements.length}`);
+});

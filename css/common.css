@@ -55,9 +55,9 @@ button {
   padding-right: 16px;
   margin: 0 auto;
 }
+
 /*END RESET*/
 
-/*task-1*/
 #categories {
   border-radius: 8px;
   padding: 24px;
@@ -102,7 +102,3 @@ button {
 .items:last-child {
   margin-bottom: 0px;
 }
-/*end task-1*/
-
-/*task-2*/
-/*end task-2*/

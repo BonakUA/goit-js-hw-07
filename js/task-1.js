@@ -1,16 +1,3 @@
-const titles = document.querySelectorAll('h2');
-titles.forEach((title) => title.classList.add('title'));
-const items = document.querySelectorAll('li')
-
-function addSelector(items) {
-    items.forEach((item) => {
-        if (!item.classList.contains('item')) {
-            item.classList.add('items');
-        }
-    });
-}
-addSelector(items);
-
 const categoriesItems = document.querySelectorAll('.item');
 console.log(`Number of categories: ${categoriesItems.length}`);
 

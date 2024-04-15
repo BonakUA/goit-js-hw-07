@@ -102,3 +102,41 @@ button {
 .items:last-child {
   margin-bottom: 0px;
 }
+
+.input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px 52px;
+  width: 150px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: 120px;
+  height: 40px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.btn-create {
+  background: #4e75ff;
+  margin-right: 16px;
+}
+
+.btn-destroy {
+  background: #ff4e4e;
+}
+
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  margin-top: 16px;
+}

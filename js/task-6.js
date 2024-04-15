@@ -5,45 +5,28 @@ function getRandomHexColor() {
 }
 
 const input = document.querySelector('input');
-input.style.border = '1px solid #808080';
-input.style.borderRadius = '8px';
-input.style.padding = '8px 52px';
-input.style.width = '150px';
-input.style.height = '40px';
-input.style.marginRight = '16px';
+input.classList.add('input');
 
 const btnCreate = document.querySelector('[data-create]');
-btnCreate.style.padding = '8px 16px';
-btnCreate.style.borderRadius = '8px';
-btnCreate.style.width = '120px';
-btnCreate.style.height = '40px';
-btnCreate.style.background = '#4e75ff';
-btnCreate.style.color = '#fff';
-btnCreate.style.marginRight = '16px';
+btnCreate.classList.add('btn', 'btn-create');
 
 const btnDestroy = document.querySelector('[data-destroy]');
-btnDestroy.style.padding = '8px 16px';
-btnDestroy.style.borderRadius = '8px';
-btnDestroy.style.width = '120px';
-btnDestroy.style.height = '40px';
-btnDestroy.style.background = '#ff4e4e';
-btnDestroy.style.color = '#fff';
+btnDestroy.classList.add('btn', 'btn-destroy');
 
 const boxesContainer = document.querySelector('#boxes');
-boxesContainer.style.display = 'flex';
-boxesContainer.style.flexWrap = 'wrap';
-boxesContainer.style.gap = '44px'
-boxesContainer.style.marginTop = '16px'
+boxesContainer.classList.add('boxes-container');
 
 function createBoxes(amount) {
+  const fragment = document.createDocumentFragment();
   for (let i = 0; i < amount; i++) {
     const size = 30 + i * 10;
     const box = document.createElement('div');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxesContainer.appendChild(box);
+    fragment.appendChild(box)
   }
+  boxesContainer.appendChild(fragment);
 }
 
 function destroyBoxes() {
